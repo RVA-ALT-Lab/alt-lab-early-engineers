@@ -51,12 +51,31 @@
             "key": "field_5ee3c8b281b6f",
             "label": "Material",
             "name": "materials",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "new_lines": "",
+            "maxlength": "",
+            "placeholder": "",
+            "rows": ""
+        },
+        {
+            "key": "field_5ee3c93364f46",
+            "label": "Google Folder Link",
+            "name": "google_folder_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
                 "class": "",
                 "id": ""
             },
@@ -220,5 +239,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1591986451
+    "modified": 1591988866
 }
