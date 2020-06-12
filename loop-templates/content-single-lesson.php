@@ -25,45 +25,46 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<div class="entry-content row">
 
 		<?php the_content(); ?>
-		<div class="sols">
+		<div class="sols col-md-6">
 			<h2>SOLs</h2>
 			<?php the_field('sols');?>
 		</div>
-		<div class="eng-focus">
+		<div class="eng-focus col-md-6">
 			<h2>Engineering Focus</h2>
 			<?php the_field('engineering_focus');?>
 		</div>
-		<div class="material">
+		<div class="material col-md-6">
 			<h2>Material</h2>
 			<?php the_field('material');?>
 		</div>
-		<div class="google-folder">
-			<h2>Resources</h2>
-			<?php 
-				$url = get_field('google_folder_link');
-				$google_id = explode("/",$url)[5];
-				echo '<iframe src="https://drive.google.com/embeddedfolderview?id='.$google_id.'#list" width="100%" height="500" frameborder="0"></iframe>';
-			?>			
-			
-		</div>
-		<div class="time">
+		<div class="time col-md-6">
 			<h2>Time</h2>
 			<?php the_field('time_needed');?>
 		</div>
-		<div class="description">
+		<div class="description col-md-6">
 			<h2>Description</h2>
 			<?php the_field('description');?>
 		</div>
-		<div class="alts">
+		<div class="alts col-md-6">
 			<h2>Alternatives or Extensions</h2>
 			<?php the_field('alternatives');?>
 		</div>
-		<div class="reflection">
+		<div class="reflection col-md-6">
 			<h2>Reflection Suggestions</h2>
 			<?php the_field('reflection');?>
+		</div>
+		<div class="google-folder col-md-12">
+			<h2>Resources</h2>
+			<?php 
+			if(get_field('google_folder_link')){
+				$url = get_field('google_folder_link');
+				$google_id = explode("/",$url)[5];
+				echo '<iframe src="https://drive.google.com/embeddedfolderview?id='.$google_id.'#list" width="100%" height="300" frameborder="0"></iframe>';
+			}
+			?>						
 		</div>
 
 		<?php
