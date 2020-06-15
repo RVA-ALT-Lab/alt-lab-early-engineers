@@ -28,43 +28,59 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content row">
 
 		<?php the_content(); ?>
+		<div class="description col-md-12">
+			<div class="holder">
+				<h2>Description</h2>
+				<?php the_field('description');?>
+			</div>
+		</div>
 		<div class="sols col-md-6">
-			<h2>SOLs</h2>
-			<?php the_field('sols');?>
+			<div class="holder">
+				<h2>SOLs</h2>
+				<?php the_field('sols');?>
+			</div>
 		</div>
 		<div class="eng-focus col-md-6">
-			<h2>Engineering Focus</h2>
-			<?php the_field('engineering_focus');?>
+			<div class="holder">
+				<h2>Engineering Focus</h2>
+				<?php the_field('engineering_focus');?>
+			</div>
 		</div>
 		<div class="material col-md-6">
-			<h2>Material</h2>
-			<?php the_field('material');?>
+			<div class="holder">	
+				<h2>Material</h2>
+				<?php the_field('material');?>
+			</div>
 		</div>
 		<div class="time col-md-6">
-			<h2>Time</h2>
-			<?php the_field('time_needed');?>
+			<div class="holder">
+				<h2>Time</h2>
+				<?php the_field('time_needed');?>
+			</div>
 		</div>
-		<div class="description col-md-6">
-			<h2>Description</h2>
-			<?php the_field('description');?>
+		<div class="alts col-md-12">
+			<div class="holder">
+				<h2>Alternatives or Extensions</h2>
+				<?php the_field('alternatives');?>
+			</div>
 		</div>
-		<div class="alts col-md-6">
-			<h2>Alternatives or Extensions</h2>
-			<?php the_field('alternatives');?>
-		</div>
-		<div class="reflection col-md-6">
-			<h2>Reflection Suggestions</h2>
-			<?php the_field('reflection');?>
+		<div class="reflection col-md-12">
+			<div class="holder">
+				<h2>Reflection Suggestions</h2>
+				<?php the_field('reflection');?>
+			</div>
 		</div>
 		<div class="google-folder col-md-12">
-			<h2>Resources</h2>
-			<?php 
-			if(get_field('google_folder_link')){
-				$url = get_field('google_folder_link');
-				$google_id = explode("/",$url)[5];
-				echo '<iframe src="https://drive.google.com/embeddedfolderview?id='.$google_id.'#list" width="100%" height="300" frameborder="0"></iframe>';
-			}
-			?>						
+			<div class="holder">				
+				<?php 
+				if(get_field('google_folder_link')){
+					echo '<h2>Resources</h2>';
+					$url = get_field('google_folder_link');
+					$google_id = explode("/",$url)[5];
+					echo '<iframe src="https://drive.google.com/embeddedfolderview?id='.$google_id.'#list" width="100%" height="300" frameborder="0"></iframe>';
+				}
+				?>	
+				</div>					
 		</div>
 
 		<?php
