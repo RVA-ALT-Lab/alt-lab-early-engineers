@@ -11,6 +11,28 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Domine', serif;
 }
 
+.wrapper {
+	background-color: $primary;
+	padding: 0;
+}
+
+.container {
+	background-color: #fff;
+	padding: 50px 80px;
+}
+
+
+//header 
+
+.logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.nav-container {
+	padding: 0;
+}
+
 //single lesson *************************
 #single-lesson-wrapper h2 {
 	border-bottom: 1px solid $gray;
