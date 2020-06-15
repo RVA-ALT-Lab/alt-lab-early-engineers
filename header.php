@@ -27,9 +27,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 		<!-- Your site title as branding in the menu -->
-				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/imgs/EE_Logo_hz_blkgld.png';?>" alt="The Early Engineers logo." class="fluid img-fluid logo">
-				</a>
+		<div class="wrapper">
+			<div class="container">
+					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/imgs/EE_Logo_hz_blkgld.png';?>" alt="The Early Engineers logo." class="fluid img-fluid logo">
+					</a>
+			</div>
+		</div>
 
 					<!-- end custom logo -->
 	<div id="wrapper-navbar">

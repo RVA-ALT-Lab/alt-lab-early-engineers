@@ -11,10 +11,11 @@ h1, h2, h3, h4, h5 {
 	font-family: 'Domine', serif;
 }
 
-.wrapper {
-	background-color: $primary;
+.wrapper, body {
+	background-color: $gray;
 	padding: 0;
 }
+
 
 .container {
 	background-color: #fff;
@@ -33,6 +34,12 @@ h1, h2, h3, h4, h5 {
 	padding: 0;
 }
 
+#wrapper-navbar {
+	background-color: $gold;
+}
+
+
+
 //single lesson *************************
 #single-lesson-wrapper h2 {
 	border-bottom: 1px solid $gray;
@@ -48,8 +55,11 @@ h1, h2, h3, h4, h5 {
 #wrapper-footer {
 	background-color: $gray;
 	padding-top: 80px;
-	margin-top: 50px;
 	color: #fff;
+}
+
+#wrapper-footer .container {
+	background-color: $gray;
 }
 
 #wrapper-footer a, caption {
