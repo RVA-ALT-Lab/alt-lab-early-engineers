@@ -48,8 +48,8 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<div class="material col-md-6">
 			<div class="holder">	
-				<h2>Material</h2>
-				<?php the_field('material');?>
+				<h2>Materials</h2>
+				<?php the_field('materials');?>
 			</div>
 		</div>
 		<div class="time col-md-6">
