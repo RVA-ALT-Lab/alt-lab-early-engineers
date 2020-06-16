@@ -43,19 +43,43 @@ defined( 'ABSPATH' ) || exit;
 		<div class="eng-focus col-md-6">
 			<div class="holder">
 				<h2>Engineering Focus</h2>
-				<?php the_field('engineering_focus');?>
+				<ul>
+					<?php $cats = get_field('engineering_focus');
+						foreach ($cats as $cat) {
+						    echo '<li>' . $cat->name . '</li>';
+						}
+					?>
+				</ul>
 			</div>
 		</div>
 		<div class="material col-md-6">
 			<div class="holder">	
-				<h2>Materials</h2>
-				<?php the_field('materials');?>
+				<?php if( have_rows('materials') ): ?>
+						<h2>Materials</h2>
+						<ul>
+							<?php while( have_rows('materials') ): the_row();
+								$item = get_sub_field('item');	
+								echo '<li>' . $item . '</li>'			
+							?> 
+						<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>			
+
 			</div>
 		</div>
 		<div class="time col-md-6">
 			<div class="holder">
-				<h2>Time</h2>
-				<?php the_field('time_needed');?>
+				<?php if( have_rows('time_needed') ): ?>
+						<h2>Time</h2>
+						<ul>
+							<?php while( have_rows('time_needed') ): the_row();
+								$name = get_sub_field('lesson_portion');	
+								$time = get_sub_field('time');	
+								echo '<li>' . $name . ' - ' . $time . ' minutes</li>'			
+							?> 
+						<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>		
 			</div>
 		</div>
 		<div class="alts col-md-12">

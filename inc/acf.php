@@ -83,7 +83,7 @@ function create_lesson_cpt() {
     'labels' => $labels,
     'menu_icon' => '',
     'supports' => array('title', 'editor', 'revisions', 'author', 'trackbacks', 'custom-fields', 'thumbnail',),
-    'taxonomies' => array(),
+    'taxonomies' => array('category','post_tag'),
     'public' => true,
     'show_ui' => true,
     'show_in_menu' => true,
