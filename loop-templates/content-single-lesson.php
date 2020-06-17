@@ -12,15 +12,33 @@ defined( 'ABSPATH' ) || exit;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php echo get_the_post_thumbnail( $post->ID, 'eng-size' ); ?>
-
-		<div class="entry-meta">
-	
-			<?php //understrap_posted_on(); ?>
-	
-		</div><!-- .entry-meta -->
+		<div class="row">
+			<div class="col-md-6">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="header-focus">
+					<ul>
+						<?php $cats = get_field('engineering_focus');
+							//echo '<li class="li-focus">Focus: </li>';
+							foreach ($cats as $cat) {
+								$link = get_category_link($cat->term_id);
+							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
+							}
+						?>
+					</ul>
+					<div class="header-materials header-box">
+						<div class="big-number"><?php echo count(get_field('materials'));?></div>
+						<div class="header-label">Materials Needed</div>
+					</div>
+					<div class="header-time header-box">
+						<div class="big-number"><?php echo total_time();?></div>
+						<div class="header-label">Minutes Required</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<?php echo get_the_post_thumbnail( $post->ID, 'eng-size' ); ?>
+			</div>
+		</div>
 
 	</header><!-- .entry-header -->
 
@@ -46,7 +64,8 @@ defined( 'ABSPATH' ) || exit;
 				<ul>
 					<?php $cats = get_field('engineering_focus');
 						foreach ($cats as $cat) {
-						    echo '<li>' . $cat->name . '</li>';
+						   $link = get_category_link($cat->term_id);
+						   echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
 						}
 					?>
 				</ul>
@@ -70,17 +89,16 @@ defined( 'ABSPATH' ) || exit;
 		<div class="time col-md-6">
 			<div class="holder">
 				<?php if( have_rows('time_needed') ): ?>
-						
-							<?php 
-							$html = '';
-							$total_time = '';
-							while( have_rows('time_needed') ): the_row();
-								$name = get_sub_field('lesson_portion');	
-								$time = get_sub_field('time');	
-								$total_time = $total_time + $time;
-								$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'			
-							?>						
-						<?php endwhile; ?>
+					<?php 
+						$html = '';
+						$total_time = '';
+						while( have_rows('time_needed') ): the_row();
+							$name = get_sub_field('lesson_portion');	
+							$time = get_sub_field('time');	
+							$total_time = $total_time + $time;
+							$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'			
+					?>						
+					<?php endwhile; ?>
 						<h2>Time</h2>
 						<h3 class="total-time">Total time: <?php echo $total_time;?> Minutes</h3>
 						<ul>

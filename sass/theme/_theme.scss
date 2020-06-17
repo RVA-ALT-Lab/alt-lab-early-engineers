@@ -41,6 +41,37 @@ h1, h2, h3, h4, h5 {
 
 
 //single lesson *************************
+.header-focus ul {
+	margin: 0;
+	padding: 0;
+}
+
+.header-focus li {
+  display: inline;
+  margin-right: 10px;
+  padding: 10px 10px 10px 20px;
+ clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
+  background-color: #efefef;
+}
+
+.header-box {
+	width: 40%;
+	display: inline-block;
+	margin-top: 30px;
+	text-align: center;	
+}
+
+.header-box:first-of-type{
+	border-right: 2px solid #efefef;
+}
+
+.big-number {
+	font-weight: 700;
+	font-size: 5em;
+	color: $gray;
+	line-height: 1;	
+}
+
 #single-lesson-wrapper h2 {
 	border-bottom: 1px solid $gray;
 }

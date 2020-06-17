@@ -8,6 +8,22 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+function total_time(){
+    global $post;
+    $id = $post->ID;
+    $total_time = '';
+    if (have_rows('time_needed',$id)){
+        $needs = get_field('time_needed');
+       foreach ($needs as $need ) {
+            $time = $need["time"];  
+            $total_time = $total_time + $time;
+       }
+         return $total_time;
+    }
+}
+
+    
+
 
 
 //ACF SAVE and LOAD JSON

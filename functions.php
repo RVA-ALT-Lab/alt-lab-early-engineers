@@ -32,4 +32,4 @@ foreach ( $understrap_includes as $file ) {
 }
 
 //new img thumbnail size
-add_image_size( 'eng-size', 500, 500, array( 'center', 'center' ) ); 
+add_image_size( 'eng-size', 500, 500, array( 'center', 'center' ) );
