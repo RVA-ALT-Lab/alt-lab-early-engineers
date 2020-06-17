@@ -14,16 +14,16 @@ defined( 'ABSPATH' ) || exit;
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php echo get_the_post_thumbnail( $post->ID, 'eng-size' ); ?>
 
 		<div class="entry-meta">
 	
 			<?php //understrap_posted_on(); ?>
-
+	
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
 	<div class="entry-content row">
 
@@ -82,7 +82,7 @@ defined( 'ABSPATH' ) || exit;
 							?>						
 						<?php endwhile; ?>
 						<h2>Time</h2>
-						<h3>Total time: <?php echo $total_time;?> Minutes</h3>
+						<h3 class="total-time">Total time: <?php echo $total_time;?> Minutes</h3>
 						<ul>
 							<?php echo $html;?>
 						</ul>

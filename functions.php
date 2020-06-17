@@ -30,3 +30,6 @@ $understrap_includes = array(
 foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
+
+//new img thumbnail size
+add_image_size( 'eng-size', 500, 500, array( 'center', 'center' ) ); 
