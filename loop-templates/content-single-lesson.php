@@ -70,14 +70,21 @@ defined( 'ABSPATH' ) || exit;
 		<div class="time col-md-6">
 			<div class="holder">
 				<?php if( have_rows('time_needed') ): ?>
-						<h2>Time</h2>
-						<ul>
-							<?php while( have_rows('time_needed') ): the_row();
+						
+							<?php 
+							$html = '';
+							$total_time = '';
+							while( have_rows('time_needed') ): the_row();
 								$name = get_sub_field('lesson_portion');	
 								$time = get_sub_field('time');	
-								echo '<li>' . $name . ' - ' . $time . ' minutes</li>'			
-							?> 
+								$total_time = $total_time + $time;
+								$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'			
+							?>						
 						<?php endwhile; ?>
+						<h2>Time</h2>
+						<h3>Total time: <?php echo $total_time;?> Minutes</h3>
+						<ul>
+							<?php echo $html;?>
 						</ul>
 					<?php endif; ?>		
 			</div>
