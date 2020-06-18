@@ -24,8 +24,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<h3 class="filter-lead">Filter workshops by</h3>
 					<h3>Category</h3>
 					<?php echo facetwp_display( 'facet', 'categories');?>	
-					<h3>Materials</h3>
-					<?php echo facetwp_display( 'facet', 'lesson_materials' );?>
+					<h3>Total Time</h3>
+					<?php echo facetwp_display( 'facet', 'time' );?>
+					<h3>Material Count</h3>
+					<?php echo facetwp_display( 'facet', 'material' );?>
 				</div>	
 			</div>
 			

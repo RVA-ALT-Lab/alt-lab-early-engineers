@@ -18,11 +18,11 @@ defined( 'ABSPATH' ) || exit;
 				<div class="header-focus">
 					
 					<div class="header-materials header-box">
-						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'resource-total', true );?></div>
+						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_resource_count', true );?></div>
 						<div class="header-label">Materials Needed</div>
 					</div>
 					<div class="header-time header-box">
-						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'time-total', true );?></div>
+						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_time_count', true );?></div>
 						<div class="header-label">Minutes Required</div>
 					</div>
 					<ul>

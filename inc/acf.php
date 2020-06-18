@@ -25,7 +25,7 @@ function total_time($id){
 
 function ee_update_total_time( $post_id ) {
     $total = total_time($post_id);
-    update_post_meta( $post_id, 'time-total', $total );
+    update_post_meta( $post_id, 'total_time_count', $total );
 
 }
 
@@ -33,7 +33,7 @@ add_action( 'save_post', 'ee_update_total_time' );
 
 function ee_update_total_resources( $post_id ) {
     $total = count(get_field('materials', $post_id));
-    update_post_meta( $post_id, 'resource-total', $total );
+    update_post_meta( $post_id, 'total_resource_count', $total );
 }
 
 add_action( 'save_post', 'ee_update_total_resources' );
