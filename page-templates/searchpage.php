@@ -22,10 +22,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-3">
 				<div class="facet-box">
 					<h3 class="filter-lead">Filter workshops by</h3>
-					<h3>Time</h3>
+					<h3>Category</h3>
 					<?php echo facetwp_display( 'facet', 'categories');?>	
-					<h3>Tools</h3>
-					<?php //echo facetwp_display( 'facet', 'lesson_' );?>
+					<h3>Materials</h3>
+					<?php echo facetwp_display( 'facet', 'lesson_materials' );?>
 				</div>	
 			</div>
 			
