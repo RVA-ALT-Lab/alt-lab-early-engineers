@@ -38,12 +38,19 @@ h1, h2, h3, h4, h5 {
 	background-color: $gold;
 }
 
-#navbarNavDropdown {
+#navbarNavDropdown, .nav-container {
 	background-color: $gold;
 }
 
 .navbar-light .navbar-nav .nav-link {
 	color: #000;
+}
+
+.show .navbar-nav .nav-link {
+	border-bottom: 1px solid #000;
+	padding: 5px;
+	margin: 10px 0;
+	text-align: center;
 }
 
 //single lesson *************************
