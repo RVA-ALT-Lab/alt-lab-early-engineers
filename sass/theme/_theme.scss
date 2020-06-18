@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5 {
 
 //single lesson *************************
 .header-focus ul {
-	margin: 0;
+	margin: 50px 0 50px 0;
 	padding: 0;
 }
 
@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5 {
   padding: 10px 10px 10px 20px;
  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
   background-color: #efefef;
+}
+
+.no-pad {
+	padding: 0;
 }
 
 .header-box {

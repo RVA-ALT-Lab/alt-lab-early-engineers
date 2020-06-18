@@ -13,9 +13,18 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 no-pad">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				<div class="header-focus">
+					
+					<div class="header-materials header-box">
+						<div class="big-number"><?php echo count(get_field('materials'));?></div>
+						<div class="header-label">Materials Needed</div>
+					</div>
+					<div class="header-time header-box">
+						<div class="big-number"><?php echo total_time();?></div>
+						<div class="header-label">Minutes Required</div>
+					</div>
 					<ul>
 						<?php $cats = get_field('engineering_focus');
 							//echo '<li class="li-focus">Focus: </li>';
@@ -25,13 +34,11 @@ defined( 'ABSPATH' ) || exit;
 							}
 						?>
 					</ul>
-					<div class="header-materials header-box">
-						<div class="big-number"><?php echo count(get_field('materials'));?></div>
-						<div class="header-label">Materials Needed</div>
-					</div>
-					<div class="header-time header-box">
-						<div class="big-number"><?php echo total_time();?></div>
-						<div class="header-label">Minutes Required</div>
+					<div class="sols col-md-12">
+						<div class="holder">
+							<h2>SOL</h2>
+							<?php the_field('sols');?>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -46,29 +53,11 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content row">
 
 		<?php the_content(); ?>
+
 		<div class="description col-md-12">
 			<div class="holder">
 				<h2>Description</h2>
 				<?php the_field('description');?>
-			</div>
-		</div>
-		<div class="sols col-md-6">
-			<div class="holder">
-				<h2>SOLs</h2>
-				<?php the_field('sols');?>
-			</div>
-		</div>
-		<div class="eng-focus col-md-6">
-			<div class="holder">
-				<h2>Engineering Focus</h2>
-				<ul>
-					<?php $cats = get_field('engineering_focus');
-						foreach ($cats as $cat) {
-						   $link = get_category_link($cat->term_id);
-						   echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
-						}
-					?>
-				</ul>
 			</div>
 		</div>
 		<div class="material col-md-6">
