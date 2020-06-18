@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 						<div class="header-label">Materials Needed</div>
 					</div>
 					<div class="header-time header-box">
-						<div class="big-number"><?php echo total_time();?></div>
+						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'time-total', true );?></div>
 						<div class="header-label">Minutes Required</div>
 					</div>
 					<ul>
@@ -80,16 +80,14 @@ defined( 'ABSPATH' ) || exit;
 				<?php if( have_rows('time_needed') ): ?>
 					<?php 
 						$html = '';
-						$total_time = '';
 						while( have_rows('time_needed') ): the_row();
 							$name = get_sub_field('lesson_portion');	
 							$time = get_sub_field('time');	
-							$total_time = $total_time + $time;
 							$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'			
 					?>						
 					<?php endwhile; ?>
 						<h2>Time</h2>
-						<h3 class="total-time">Total time: <?php echo $total_time;?> Minutes</h3>
+						<h3 class="total-time">Total time: <?php echo get_post_meta( get_the_ID(), 'time-total', true );?> Minutes</h3>
 						<ul>
 							<?php echo $html;?>
 						</ul>

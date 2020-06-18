@@ -8,19 +8,28 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-function total_time(){
-    global $post;
-    $id = $post->ID;
-    $total_time = '';
+function total_time($id){   
+    $total_time = 0;
     if (have_rows('time_needed',$id)){
         $needs = get_field('time_needed');
        foreach ($needs as $need ) {
-            $time = $need["time"];  
+            $time = intval($need["time"]);  
             $total_time = $total_time + $time;
        }
          return $total_time;
     }
 }
+
+
+//update totals 
+
+function ee_update_total_time( $post_id ) {
+    $total = total_time($post_id);
+    update_post_meta( $post_id, 'time-total', $total );
+
+}
+
+add_action( 'save_post', 'ee_update_total_time' );
 
     
 
