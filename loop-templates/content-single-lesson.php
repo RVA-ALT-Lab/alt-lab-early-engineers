@@ -118,6 +118,16 @@ defined( 'ABSPATH' ) || exit;
 				?>	
 				</div>					
 		</div>
+		<div class="photos row">
+			<div class="holder">	
+				<?php $photos = get_field('images');
+					//echo '<li class="li-focus">Focus: </li>';
+					foreach ($photos as $photo) {
+						echo '<img src="' . $photo["image"]["url"] . '">';
+					}
+				?>
+			</div>
+		</div>
 
 		<?php
 		wp_link_pages(
