@@ -25,11 +25,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 
-					<div class="site-info">
+					<div class="row">
+		                <div class="col-md-6 text-white">
+		                    <a href="https://www.vcu.edu/" title="footer link to VCU">
+		                        <h3>Virginia Commonwealth University</h3>
+		                    </a>
 
-						<?php understrap_site_info(); ?>
+		                    <a href="https://egr.vcu.edu/" title="footer link to VCU Engineering">
+		                        <h4>College of Engineering</h4>
+		                    </a>
 
-					</div><!-- .site-info -->
+		                    <p>601 West Main Street<br>Box 843068<br>Richmond, Virginia 23284-3068</p>
+		                    <p><a href="https://egr.vcu.edu/about/outreach/contact-us/">Contact Us</a></p>
+		                </div>
+
+		                <div class="col-md-6 text-white text-md-right">
+		                    <small>
+		                    	<a href="https://www.vcu.edu/vcu/privacy-statement.html" title="VCU privacy statement" target="_blank">Privacy</a> | <a href="http://accessibility.vcu.edu/" title="Accessibility at VCU" target="_blank">Accessibility</a> | <a href="mailto:webmaster@vcu.edu" title="Contact the VCU webmaster" target="_blank">Webmaster</a></span></small>
+		                </div>
+		            </div>
 
 				</footer><!-- #colophon -->
 

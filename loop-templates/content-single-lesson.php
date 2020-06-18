@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 			</div>
 			<div class="col-md-6">
-				<?php echo get_the_post_thumbnail( $post->ID, 'eng-size' ); ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'eng-size', array('class' => 'lesson-thumb') ); ?>
 			</div>
 		</div>
 

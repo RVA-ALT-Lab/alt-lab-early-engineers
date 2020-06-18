@@ -38,7 +38,13 @@ h1, h2, h3, h4, h5 {
 	background-color: $gold;
 }
 
+#navbarNavDropdown {
+	background-color: $gold;
+}
 
+.navbar-light .navbar-nav .nav-link {
+	color: #000;
+}
 
 //single lesson *************************
 .header-focus ul {
@@ -90,13 +96,18 @@ h1, h2, h3, h4, h5 {
 
 //footer
 #wrapper-footer {
-	background-color: $gray;
+	background-color: #000;
 	padding-top: 80px;
 	color: #fff;
 }
 
 #wrapper-footer .container {
-	background-color: $gray;
+	background-color: #000;
+	padding: 50px 10px;
+}
+
+#wrapper-footer .container a{
+	color: $gold;
 }
 
 #wrapper-footer a, caption {
