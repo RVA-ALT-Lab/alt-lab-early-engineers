@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="header-focus">
 					
 					<div class="header-materials header-box">
-						<div class="big-number"><?php echo count(get_field('materials'));?></div>
+						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'resource-total', true );?></div>
 						<div class="header-label">Materials Needed</div>
 					</div>
 					<div class="header-time header-box">

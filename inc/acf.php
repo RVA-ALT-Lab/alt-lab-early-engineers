@@ -31,6 +31,12 @@ function ee_update_total_time( $post_id ) {
 
 add_action( 'save_post', 'ee_update_total_time' );
 
+function ee_update_total_resources( $post_id ) {
+    $total = count(get_field('materials', $post_id));
+    update_post_meta( $post_id, 'resource-total', $total );
+}
+
+add_action( 'save_post', 'ee_update_total_resources' );
     
 
 
