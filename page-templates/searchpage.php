@@ -21,9 +21,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-md-3">
 				<div class="facet-box">
-					<h3 class="filter-lead">Filter workshops by</h3>
-					<h3>Category</h3>
-					<?php echo facetwp_display( 'facet', 'categories');?>	
+					<h3 class="filter-lead">Filter by:</h3>
+					<h3>Math Themes</h3>
+					<?php echo facetwp_display( 'facet', 'math_themes');?>
+					<h3>Science Themes</h3>
+					<?php echo facetwp_display( 'facet', 'science_themes');?>		
 					<h3>Total Time</h3>
 					<?php echo facetwp_display( 'facet', 'time' );?>
 					<h3>Material Count</h3>
