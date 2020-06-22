@@ -26,7 +26,28 @@ defined( 'ABSPATH' ) || exit;
 						<div class="header-label">Minutes Required</div>
 					</div>
 					<ul>
-						<?php $cats = get_field('engineering_focus');
+						<?php $cats = get_field('science_themes');
+							//echo '<li class="li-focus">Focus: </li>';
+							foreach ($cats as $cat) {
+								$link = get_category_link($cat->term_id);
+							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
+							}
+						?>
+						<?php $cats = get_field('math_themes');
+							//echo '<li class="li-focus">Focus: </li>';
+							foreach ($cats as $cat) {
+								$link = get_category_link($cat->term_id);
+							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
+							}
+						?>
+						<?php $cats = get_field('engineering_themes');
+							//echo '<li class="li-focus">Focus: </li>';
+							foreach ($cats as $cat) {
+								$link = get_category_link($cat->term_id);
+							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
+							}
+						?>
+						<?php $cats = get_field('comp_sci_themes');
 							//echo '<li class="li-focus">Focus: </li>';
 							foreach ($cats as $cat) {
 								$link = get_category_link($cat->term_id);
