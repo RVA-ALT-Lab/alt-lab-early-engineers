@@ -17,19 +17,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
-
+		<div class="row">
+			<div class="col-md-3 offset-md-3">
+				<h3>Total Time</h3>
+				<?php echo facetwp_display( 'facet', 'time' );?>
+			</div>
+			<div class="col-md-3">
+				<h3>Material Count</h3>
+				<?php echo facetwp_display( 'facet', 'material' );?>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-3">
 				<div class="facet-box">
-					<h3 class="filter-lead">Filter by:</h3>
+					<h3 class="filter-lead">Filter by theme:</h3>
 					<h3>Math Themes</h3>
 					<?php echo facetwp_display( 'facet', 'math_themes');?>
 					<h3>Science Themes</h3>
-					<?php echo facetwp_display( 'facet', 'science_themes');?>		
-					<h3>Total Time</h3>
-					<?php echo facetwp_display( 'facet', 'time' );?>
-					<h3>Material Count</h3>
-					<?php echo facetwp_display( 'facet', 'material' );?>
+					<?php echo facetwp_display( 'facet', 'science_themes');?>	
+					<h3>Computer Science Themes</h3>
+					<?php echo facetwp_display( 'facet', 'comp_sci_themes');?>
+					<h3>Engineering Themes</h3>
+					<?php echo facetwp_display( 'facet', 'engineering_themes');?>									
 				</div>	
 			</div>
 			
