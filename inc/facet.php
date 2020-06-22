@@ -6,7 +6,7 @@
 			<div class="collapse" id="<?php echo $post->post_name?>">
 			  <div class="card card-body">
 			    <?php the_content()?>
-				<a class="workshop-learn-more" href="<?php the_permalink(); ?>">Learn more about the <?php the_title(); ?> workshop</a>
+				<a class="workshop-learn-more" href="<?php the_permalink(); ?>">Learn more about the <?php the_title(); ?> lesson.</a>
 			  </div>
 			</div>
 		</div>
