@@ -142,9 +142,13 @@ defined( 'ABSPATH' ) || exit;
 		<div class="photos row">
 				<?php $photos = get_field('images');
 					//echo '<li class="li-focus">Focus: </li>';
-					foreach ($photos as $photo) {
-						echo '<div class="col-md-4"><img src="' . $photo["image"]["url"] . '" class="img-fluid"></div>';
-					}
+				    if ($photos){
+				    	$count = count(get_field('images'));
+				    	foreach ($photos as $photo) {
+							echo '<div class="'. ee_image_div($count) .'"><img src="' . $photo["image"]["url"] . '" class="img-fluid"></div>';
+						}
+				    }
+					
 				?>
 		</div>
 

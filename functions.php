@@ -45,3 +45,17 @@ add_filter( 'facetwp_shortcode_html', function( $output, $atts) {
 	}
 	return $output; 
 }, 10, 2 );
+
+function ee_image_div($count){
+	if ($count === 1){
+		return 'col-md-12';
+	}if ($count === 2){
+		return 'col-md-6';
+	}if ($count === 3){
+		return 'col-md-4';
+	}if ($count === 4){
+		return 'col-md-3';
+	} if ($count >4){
+		return 'col-md-3';
+	}
+}
