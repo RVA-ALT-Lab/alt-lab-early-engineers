@@ -17,7 +17,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+
 		<div class="row">
+			<div class="col-md-9 content-area" id="primary">
+
+				<main class="site-main" id="main" role="main">
+					
+
+					<?php
+					while ( have_posts() ) {
+						the_post();
+
+						get_template_part( 'loop-templates/content', 'page' );
+						
+					}
+					?>
+				</main><!-- #main -->
+
+			</div><!-- #primary -->
+
 			<div class="col-md-3 offset-md-3">
 				<h3>Total Time</h3>
 				<?php echo facetwp_display( 'facet', 'time' );?>
@@ -41,28 +59,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php echo facetwp_display( 'facet', 'engineering_themes');?>									
 				</div>	
 			</div>
-			
+			<div class="col-md-9">
 
-			<div class="col-md-9 content-area" id="primary">
-
-				<main class="site-main" id="main" role="main">
-					
-
-					<?php
-					while ( have_posts() ) {
-						the_post();
-
-						get_template_part( 'loop-templates/content', 'page' );
-						
-					}
-					?>
 					<?php echo facetwp_display( 'template', 'lesson_display' );?>
 					<?php echo do_shortcode('[facetwp pager="true"]') ;?>
 					<button class="btn btn-alp btn-dark" value="Reset" onclick="FWP.reset()" class="facet-reset" />Reset Filters</button>
-
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
+			
+			</div>
+						
 
 		</div><!-- .row -->
 
