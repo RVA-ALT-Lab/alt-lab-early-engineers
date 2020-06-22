@@ -264,6 +264,94 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ef0a260a9890",
+            "label": "Science Themes",
+            "name": "science_themes",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "science_tags",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5ef0a2aaa9891",
+            "label": "Math Themes",
+            "name": "math_themes",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "math_tags",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5ef0a2bfa9892",
+            "label": "Computer Science Themes",
+            "name": "comp_sci_themes",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "comp_sci_tags",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_5ef0a2d7a9893",
+            "label": "Engineering Themes",
+            "name": "engineering_themes",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "eng_tags",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
         }
     ],
     "location": [
@@ -296,5 +384,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1592476897
+    "modified": 1592828657
 }
