@@ -37,7 +37,7 @@ function ee_science_tags() {
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => true,
+		'show_ui'                    => false,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
@@ -46,6 +46,7 @@ function ee_science_tags() {
 
 }
 add_action( 'init', 'ee_science_tags', 0 );
+
 
 
 // Register Custom Taxonomy
@@ -77,7 +78,7 @@ function ee_math_tags() {
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => true,
+		'show_ui'                    => false,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
@@ -117,7 +118,7 @@ function ee_comp_sci_tags() {
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => true,
+		'show_ui'                    => false,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
@@ -157,7 +158,7 @@ function ee_eng_tags() {
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
-		'show_ui'                    => true,
+		'show_ui'                    => false,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,

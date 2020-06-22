@@ -140,14 +140,12 @@ defined( 'ABSPATH' ) || exit;
 				</div>					
 		</div>
 		<div class="photos row">
-			<div class="holder">	
 				<?php $photos = get_field('images');
 					//echo '<li class="li-focus">Focus: </li>';
 					foreach ($photos as $photo) {
-						echo '<img src="' . $photo["image"]["url"] . '">';
+						echo '<div class="col-md-4"><img src="' . $photo["image"]["url"] . '" class="img-fluid"></div>';
 					}
 				?>
-			</div>
 		</div>
 
 		<?php
