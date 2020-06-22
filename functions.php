@@ -25,6 +25,7 @@ $understrap_includes = array(
 	'/editor.php',                          // Load Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
 	'/acf.php',                             // Load ACF functions.
+	'/ee_taxonomies.php',					//custom taxonomies
 );
 
 foreach ( $understrap_includes as $file ) {
