@@ -55,16 +55,23 @@ h1, h2, h3, h4, h5 {
 
 //single lesson *************************
 .header-focus ul {
-	margin: 50px 0 50px 0;
+	margin: 20px 0 20px 0;
 	padding: 0;
 }
 
 .header-focus li {
-  display: inline;
+  display: inline-block;
   margin-right: 10px;
   padding: 10px 10px 10px 20px;
- clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
   background-color: #efefef;
+  font-size: .9em;
+}
+
+.header-focus li.li-focus {
+	display: block;
+	width: 100%;
+	background-color: #fff;
 }
 
 .no-pad {

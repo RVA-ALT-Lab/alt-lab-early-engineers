@@ -25,36 +25,38 @@ defined( 'ABSPATH' ) || exit;
 						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_time_count', true );?></div>
 						<div class="header-label">Minutes Required</div>
 					</div>
-					<ul>
 						<?php $cats = get_field('science_themes');
-							//echo '<li class="li-focus">Focus: </li>';
+							echo '<ul><li class="li-focus">SCIENCE: </li>';
 							foreach ($cats as $cat) {
 								$link = get_category_link($cat->term_id);
 							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
 							}
+							echo '</ul>';
 						?>
 						<?php $cats = get_field('math_themes');
-							//echo '<li class="li-focus">Focus: </li>';
+							echo '<ul><li class="li-focus">MATH: </li>';
 							foreach ($cats as $cat) {
 								$link = get_category_link($cat->term_id);
 							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
 							}
+							echo '</ul>';
 						?>
 						<?php $cats = get_field('engineering_themes');
-							//echo '<li class="li-focus">Focus: </li>';
+							echo '<ul><li class="li-focus">ENGINEERING: </li>';
 							foreach ($cats as $cat) {
 								$link = get_category_link($cat->term_id);
 							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
 							}
+							echo '</ul>';
 						?>
 						<?php $cats = get_field('comp_sci_themes');
-							//echo '<li class="li-focus">Focus: </li>';
+							echo '<ul><li class="li-focus">COMPUTER SCIENCE: </li>';
 							foreach ($cats as $cat) {
 								$link = get_category_link($cat->term_id);
 							    echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
 							}
+							echo '</ul>';
 						?>
-					</ul>
 					<div class="sols col-md-12">
 						<div class="holder">
 							<h2>SOL</h2>
