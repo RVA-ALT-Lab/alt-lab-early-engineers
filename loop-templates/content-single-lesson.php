@@ -18,8 +18,14 @@ defined( 'ABSPATH' ) || exit;
 				<div class="header-focus">
 					
 					<div class="header-materials header-box">
-						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_resource_count', true );?></div>
-						<div class="header-label">Materials Needed</div>
+						<div class="big-number"><?php 
+						if (get_post_meta( get_the_ID(), 'total_resource_count', true ) > 1){
+							$materials_label = 'Materials';
+						} else {
+							$materials_label = 'Material';
+						}
+						echo get_post_meta( get_the_ID(), 'total_resource_count', true );?></div>
+						<div class="header-label"><?php echo $materials_label;?> Needed</div>
 					</div>
 					<div class="header-time header-box">
 						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_time_count', true );?></div>
