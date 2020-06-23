@@ -40,6 +40,20 @@ add_action( 'save_post', 'ee_update_total_resources' );
     
 
 
+//subject theme loops
+
+function ee_subject_theme_list($acf_theme, $title){
+    if(get_field($acf_theme)){
+        $cats = get_field($acf_theme);
+        echo '<ul><li class="li-focus">'.$title.': </li>';
+        foreach ($cats as $cat) {
+            $link = get_category_link($cat->term_id);
+            echo '<li><a href="' . $link . '">' . $cat->name . '</a></li>';
+        }
+        echo '</ul>';
+    }    
+}
+
 
 //ACF SAVE and LOAD JSON
 add_filter('acf/settings/save_json', 'alt_ee_json_save_point');
