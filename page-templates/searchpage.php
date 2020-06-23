@@ -37,11 +37,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- #primary -->
 
 			<div class="col-md-3 offset-md-3">
-				<h3>Total Time</h3>
+				<h3>Time</h3>
 				<?php echo facetwp_display( 'facet', 'time' );?>
 			</div>
 			<div class="col-md-3">
-				<h3>Material Count</h3>
+				<h3>Materials</h3>
 				<?php echo facetwp_display( 'facet', 'material' );?>
 			</div>
 		</div>
