@@ -25,6 +25,7 @@ defined( 'ABSPATH' ) || exit;
 						<div class="big-number"><?php echo get_post_meta( get_the_ID(), 'total_time_count', true );?></div>
 						<div class="header-label">Minutes Required</div>
 					</div>
+					<div class="theme-box">
 						<?php ee_subject_theme_list('science_themes', 'Science');?>
 							
 						<?php ee_subject_theme_list('math_themes', 'Math');?>
@@ -32,6 +33,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php ee_subject_theme_list('engineering_themes', 'Engineering');?>
 						
 						<?php ee_subject_theme_list('comp_sci_themes', 'Computer Science');?>
+					</div>
 					<div class="sols col-md-12">
 						<div class="holder">
 							<h2>SOL</h2>

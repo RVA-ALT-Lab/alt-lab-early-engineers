@@ -73,9 +73,11 @@ h1, h2, h3, h4, h5 {
 	width: 100%;
 	background-color: #fff;
 	margin: 10px 0 0 0;
-	font-size: .7em;
+	font-size: .8em;
 	padding: 0;
 	clip-path: none;
+	text-transform: uppercase;
+	font-weight: 100;
 }
 
 .no-pad {
@@ -83,9 +85,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .header-box {
-	width: 40%;
+	width: 48%;
 	display: inline-block;
-	margin-top: 30px;
+	margin: 30px auto 0 auto;
 	text-align: center;	
 }
 
@@ -98,6 +100,11 @@ h1, h2, h3, h4, h5 {
 	font-size: 5em;
 	color: $gray;
 	line-height: 1;	
+}
+
+.theme-box {
+	margin: 30px 0;
+    border-top: 2px solid #efefef;
 }
 
 #single-lesson-wrapper h2 {
