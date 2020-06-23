@@ -59,3 +59,5 @@ function ee_image_div($count){
 		return 'col-md-3';
 	}
 }
+
+  //print("<pre>".print_r($a,true)."</pre>");

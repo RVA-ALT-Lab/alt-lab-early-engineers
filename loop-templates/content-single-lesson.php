@@ -132,7 +132,8 @@ defined( 'ABSPATH' ) || exit;
 				    if ($photos){
 				    	$count = count(get_field('images'));
 				    	foreach ($photos as $photo) {
-							echo '<div class="'. ee_image_div($count) .'"><img src="' . $photo["image"]["url"] . '" class="img-fluid"></div>';
+				    		 //print("<pre>".print_r($photo,true)."</pre>");
+							echo '<div class="'. ee_image_div($count) .'"><img src="' . $photo["image"]["sizes"]["eng-size"] . '" class="img-fluid"></div>';
 						}
 				    }
 					
