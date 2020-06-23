@@ -43,7 +43,15 @@ defined( 'ABSPATH' ) || exit;
 				</div>
 			</div>
 			<div class="col-md-6">
-				<?php echo get_the_post_thumbnail( $post->ID, 'eng-size', array('class' => 'lesson-thumb') ); ?>
+				<?php 
+				$thumbnail_id = get_post_thumbnail_id( $post->ID );
+				if (get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true)){
+					$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
+				} else {
+					$alt = 'A thumbnail image for this lesson.';
+				}
+
+				echo get_the_post_thumbnail( $post->ID, 'eng-size', array('class' => 'lesson-thumb', 'alt' => $alt) ); ?>
 			</div>
 		</div>
 
