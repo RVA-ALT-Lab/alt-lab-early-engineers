@@ -62,11 +62,37 @@ h1, h2, h3, h4, h5 {
 .header-focus li {
   display: inline-block;
   margin-right: 10px;
-  padding: 10px 10px 10px 20px;
-  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
+  padding: 10px 30px 10px 30px;
+  // clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
   background-color: $gold;
   font-size: .9em;
+  border-radius: 24px;
+  position: relative;
 }
+
+.header-focus li:before {
+	content: '';
+	height: 10px;
+	width: 10px;
+	display: block;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+} 
+
+.header-focus li:after {
+	content: '';
+	height: 10px;
+	width: 10px;
+	display: block;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+} 
 
 .header-focus li.li-focus {
 	display: block;
@@ -78,6 +104,10 @@ h1, h2, h3, h4, h5 {
 	clip-path: none;
 	text-transform: uppercase;
 	font-weight: 100;
+}
+
+.header-focus li.li-focus:before, .header-focus li.li-focus:after {
+	display: none;
 }
 
 .no-pad {
@@ -133,12 +163,40 @@ h1, h2, h3, h4, h5 {
 .facet-box h4 {
   display: inline-block;
   margin-right: 10px;
-  padding: 10px 10px 10px 20px;
-  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
+  padding: 10px 30px 10px 30px;
+  border-radius: 24px;
+  // clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 5% 100%, 0% 50%, 5% 0);
   background-color: $gold;
   width: 100%;
   font-size: 1.1em;
+  position: relative;
+  text-align: center;
 }
+
+.facet-box h4:before {
+	content: '';
+	height: 10px;
+	width: 10px;
+	display: block;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+} 
+
+.facet-box h4:after {
+	content: '';
+	height: 10px;
+	width: 10px;
+	display: block;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+} 
+
 
 .facet-lesson-info {
 	margin-bottom: 30px;
