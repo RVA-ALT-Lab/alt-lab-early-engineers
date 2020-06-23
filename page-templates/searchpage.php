@@ -49,14 +49,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-3">
 				<div class="facet-box">
 					<h3 class="filter-lead">Filter by theme:</h3>
-					<h3>Math Themes</h3>
-					<?php echo facetwp_display( 'facet', 'math_themes');?>
-					<h3>Science Themes</h3>
-					<?php echo facetwp_display( 'facet', 'science_themes');?>	
-					<h3>Computer Science Themes</h3>
+					<h4>Computer Science</h4>
 					<?php echo facetwp_display( 'facet', 'comp_sci_themes');?>
-					<h3>Engineering Themes</h3>
-					<?php echo facetwp_display( 'facet', 'engineering_themes');?>									
+					<h4>Engineering</h4>
+					<?php echo facetwp_display( 'facet', 'engineering_themes');?>	
+					<h4>Math</h4>
+					<?php echo facetwp_display( 'facet', 'math_themes');?>
+					<h4>Science</h4>
+					<?php echo facetwp_display( 'facet', 'science_themes');?>	
+												
 				</div>	
 			</div>
 			<div class="col-md-9">
