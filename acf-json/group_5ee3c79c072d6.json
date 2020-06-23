@@ -6,7 +6,7 @@
             "key": "field_5ee3c7a88a426",
             "label": "SOL",
             "name": "sols",
-            "type": "text",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "taxonomy": "sol_tags",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "allow_null": 0
         },
         {
             "key": "field_5ee3c8b281b6f",
@@ -362,5 +365,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1592919862
+    "modified": 1592941116
 }
