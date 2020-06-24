@@ -19,7 +19,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
-			<div class="col-md-9 content-area" id="primary">
+			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 					
@@ -36,7 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			</div><!-- #primary -->
 
-			<div class="col-md-3 offset-md-3">
+			<div class="col-md-3">
+				<?php echo facetwp_display( 'facet', 'search' );?>
+			</div>
+			<div class="col-md-3">
 				<h3>Time</h3>
 				<?php echo facetwp_display( 'facet', 'time' );?>
 			</div>
