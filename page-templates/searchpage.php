@@ -35,8 +35,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-
-			<div class="col-md-3">
+			
+			<div class="col-md-6 text-search">
+				<h3>Text Search</h3>
 				<?php echo facetwp_display( 'facet', 'search' );?>
 			</div>
 			<div class="col-md-3">
