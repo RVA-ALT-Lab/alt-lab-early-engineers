@@ -333,6 +333,81 @@
             "return_format": "object",
             "multiple": 0,
             "allow_null": 0
+        },
+        {
+            "key": "field_5efa1d3b5257b",
+            "label": "Resources and References",
+            "name": "resources_and_references",
+            "type": "repeater",
+            "instructions": "This is a place to include additional resources or reference materials.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Resource",
+            "sub_fields": [
+                {
+                    "key": "field_5efa1d515257c",
+                    "label": "Title",
+                    "name": "resource_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5efa1d925257d",
+                    "label": "Resource Link",
+                    "name": "resource_link",
+                    "type": "url",
+                    "instructions": "Optional",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5efa1da35257e",
+                    "label": "Resource Description",
+                    "name": "resource_description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -365,5 +440,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1592941116
+    "modified": 1593449975
 }
