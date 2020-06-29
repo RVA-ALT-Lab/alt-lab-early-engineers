@@ -116,55 +116,61 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<!--END TIME-->		
 		<!-- ALTERNATIVES -->		
-		<div class="alts col-md-12">
-			<div class="holder">
-				<?php if( get_field('alternatives') ): ?>
+		
+		<?php if( get_field('alternatives') ): ?>
+			<div class="alts col-md-12">
+				<div class="holder">
 					<h2>Alternatives or Extensions</h2>
 					<?php the_field('alternatives');?>
-				<?php endif; ?>		
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>		
+			
 		<!-- END ALTERNATIVES -->				
 		<!-- REFLECTION -->		
-		<div class="reflection col-md-12">
-			<div class="holder">
-				<?php if( get_field('reflection') ): ?>
+		
+		<?php if( get_field('reflection') ): ?>
+			<div class="reflection col-md-12">
+				<div class="holder">
 					<h2>Reflection Suggestions</h2>
 					<?php the_field('reflection');?>
-				<?php endif; ?>							
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>							
+		
 		<!-- END REFLECTION -->	
 		<!-- RESOURCES -->
-		<div class="resources col-md-12">
-			<div class="holder">
-				<?php if( have_rows('resources_and_references') ): ?>
-					<h2>Resources and References</h2>
-					<ul>						
-					<?php 
-						$html = '';
-						while( have_rows('resources_and_references') ): the_row();
-							$title = get_sub_field('resource_title');	
-							$link = get_sub_field('resource_link');	
-							$description = get_sub_field('resource_description');	
-							$html .= '<li>';
-							if ($link){ 
-								$html .= '<a href=' . $link . '</a>';
-							} 
-							$html .= $title;
-							if($link){
-								$html .= '</a>';
-							}
-							if($description) { 
-								$html .= ' - ' . $description;
-							};		
-					?>				
-					<?php endwhile; ?>
-					<?php echo $html;?>					
-						</ul>
-					<?php endif; ?>		
+
+		<?php if( have_rows('resources_and_references') ): ?>
+			<div class="resources col-md-12">
+				<div class="holder">
+				<h2>Resources and References</h2>
+				<ul>						
+				<?php 
+					$html = '';
+					while( have_rows('resources_and_references') ): the_row();
+						$title = get_sub_field('resource_title');	
+						$link = get_sub_field('resource_link');	
+						$description = get_sub_field('resource_description');	
+						$html .= '<li>';
+						if ($link){ 
+							$html .= '<a href=' . $link . '</a>';
+						} 
+						$html .= $title;
+						if($link){
+							$html .= '</a>';
+						}
+						if($description) { 
+							$html .= ' - ' . $description;
+						};		
+				?>				
+				<?php endwhile; ?>
+				<?php echo $html;?>					
+					</ul>
+				</div>
 			</div>
-		</div>
+		<?php endif; ?>		
+			
 		<!--END RESOURCES-->		
 
 		<!-- GDRIVE -->							
