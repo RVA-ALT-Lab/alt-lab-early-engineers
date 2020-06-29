@@ -181,7 +181,8 @@ defined( 'ABSPATH' ) || exit;
 					echo '<h2>Resources</h2>';
 					$url = get_field('google_folder_link');
 					$google_id = explode("/",$url)[5];
-					echo '<iframe src="https://drive.google.com/embeddedfolderview?id='.$google_id.'#list" width="100%" height="300" frameborder="0"></iframe>';
+					$clean_id = explode("?", $google_id)[0];
+					echo '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $clean_id . '#list" width="100%" height="300" frameborder="0"></iframe>';
 				}
 				?>	
 				</div>					
