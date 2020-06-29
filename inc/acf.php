@@ -21,6 +21,15 @@ function total_time($id){
 }
 
 
+function ee_materials_count(){
+    $materials = get_post_meta( get_the_ID(), 'total_resource_count', true );
+    if ($materials > 1){
+        return $materials;
+    } else {
+        return 0;
+    }
+}
+
 //update totals 
 
 function ee_update_total_time( $post_id ) {

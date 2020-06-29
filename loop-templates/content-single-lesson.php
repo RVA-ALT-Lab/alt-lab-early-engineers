@@ -19,12 +19,12 @@ defined( 'ABSPATH' ) || exit;
 					
 					<div class="header-materials header-box">
 						<div class="big-number"><?php 
-						if (get_post_meta( get_the_ID(), 'total_resource_count', true ) > 1){
+						if (get_post_meta( get_the_ID(), 'total_resource_count', true ) > 1 || get_post_meta( get_the_ID(), 'total_resource_count', true ) == '0' ){
 							$materials_label = 'Materials';
 						} else {
 							$materials_label = 'Material';
 						}
-						echo get_post_meta( get_the_ID(), 'total_resource_count', true );?></div>
+						echo ee_materials_count();?></div>
 						<div class="header-label"><?php echo $materials_label;?> Needed</div>
 					</div>
 					<div class="header-time header-box">
@@ -76,8 +76,8 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<div class="material col-md-6">
 			<div class="holder">	
+				<h2>Materials</h2>
 				<?php if( have_rows('materials') ): ?>
-						<h2>Materials</h2>
 						<ul>
 							<?php while( have_rows('materials') ): the_row();
 								$item = get_sub_field('item');	
@@ -85,6 +85,8 @@ defined( 'ABSPATH' ) || exit;
 							?> 
 						<?php endwhile; ?>
 						</ul>
+				<?php else: ?>
+				<p>No materials needed.</p>	
 					<?php endif; ?>			
 
 			</div>
@@ -101,7 +103,7 @@ defined( 'ABSPATH' ) || exit;
 					?>						
 					<?php endwhile; ?>
 						<h2>Time</h2>
-						<h3 class="total-time">Total time: <?php echo get_post_meta( get_the_ID(), 'time-total', true );?> Minutes</h3>
+						<h3 class="total-time">Total time: <?php echo get_post_meta( get_the_ID(), 'total_time_count', true );?> Minutes</h3>
 						<ul>
 							<?php echo $html;?>
 						</ul>
