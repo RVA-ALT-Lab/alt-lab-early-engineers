@@ -19,10 +19,10 @@ defined( 'ABSPATH' ) || exit;
 					
 					<div class="header-materials header-box">
 						<div class="big-number"><?php 
-						if (get_post_meta( get_the_ID(), 'total_resource_count', true ) > 1 || get_post_meta( get_the_ID(), 'total_resource_count', true ) == '0' ){
-							$materials_label = 'Materials';
-						} else {
+						if (get_post_meta( get_the_ID(), 'total_resource_count', true ) === 1 ){
 							$materials_label = 'Material';
+						} else {
+							$materials_label = 'Materials';
 						}
 						echo ee_materials_count();?></div>
 						<div class="header-label"><?php echo $materials_label;?> Needed</div>
