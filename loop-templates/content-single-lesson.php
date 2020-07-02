@@ -66,7 +66,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content row">
 
-		<?php the_content(); ?>
+		<?php //the_content(); ?>
 		<!-- DESCRIPTION -->
 		<div class="description col-md-12">
 			<div class="holder">
@@ -103,7 +103,8 @@ defined( 'ABSPATH' ) || exit;
 						while( have_rows('time_needed') ): the_row();
 							$name = get_sub_field('lesson_portion');	
 							$time = get_sub_field('time');	
-							$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'			
+							//$html .= '<li>' . $name . ' - ' . $time . ' minutes</li>'	;
+							$html .= ee_time_list($name, $time);									
 					?>						
 					<?php endwhile; ?>
 						<h2>Time</h2>

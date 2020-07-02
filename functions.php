@@ -60,4 +60,16 @@ function ee_image_div($count){
 	}
 }
 
-  //print("<pre>".print_r($a,true)."</pre>");
+
+function ee_time_list($name, $time){	
+	$html = '<li>';
+	if($name){
+		$html .= $name . ' - ';
+	}
+	$html .= $time . ' minutes</li>';			
+	return $html;
+ 
+}
+
+
+ //print("<pre>".print_r($a,true)."</pre>");
