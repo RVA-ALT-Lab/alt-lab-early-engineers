@@ -46,7 +46,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 			<div class="col-md-3">
 				<h3>Materials</h3>
-				<?php echo facetwp_display( 'facet', 'material' );?>
+				<?php echo facetwp_display( 'facet', 'material' ); //actual location is /inc/facet.php?>
 			</div>
 		</div>
 		<div class="row">
