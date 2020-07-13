@@ -144,7 +144,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php if( have_rows('resources_and_references') ): ?>
 			<div class="resources col-md-12">
 				<div class="holder">
-				<h2>Resources and References</h2>
+				<h2>Helpful Links</h2>
 				<ul>						
 				<?php 
 					$html = '';
@@ -154,15 +154,15 @@ defined( 'ABSPATH' ) || exit;
 						$description = get_sub_field('resource_description');	
 						$html .= '<li>';
 						if ($link){ 
-							$html .= '<a href=' . $link . '</a>';
-						} 
+							$html .= '<a href="' . $link . '" target="_blank" >';
+							} 
 						$html .= $title;
 						if($link){
 							$html .= '</a>';
-						}
+							}
 						if($description) { 
 							$html .= ' - ' . $description;
-						};		
+							};		
 				?>				
 				<?php endwhile; ?>
 				<?php echo $html;?>					
