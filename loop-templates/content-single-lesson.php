@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 					</div>
 					<div class="sols col-md-12">
 						<div class="holder">
-							<h2>SOL</h2>
+							<h2>VA SOL</h2>
 							<?php ee_subject_theme_list('sols', '');?>
 						</div>
 					</div>
